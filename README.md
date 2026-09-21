@@ -45,3 +45,8 @@ The application adheres strictly to the **MVC (Model-View-Controller)** architec
                +----------------------------------+
                |      MySQL Database (Storage)    |
                +----------------------------------+
+
+📝 Troubleshooting & Common Gotchas
+Expression Language (EL) Issues: Ensure isELIgnored="false" is declared at the top of JSP files when using Jakarta EE 10, or ensure web.xml declares Servlet version 6.0.
+
+Missing JSTL Dependencies: Tomcat 10+ requires both jakarta.servlet.jsp.jstl-api (v3.0.0) and org.glassfish.web:jakarta.servlet.jsp.jstl (v3.0.1) in the runtime classpath (WEB-INF/lib).
