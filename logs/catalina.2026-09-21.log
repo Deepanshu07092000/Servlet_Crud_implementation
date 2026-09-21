@@ -1,0 +1,656 @@
+21-Sep-2026 10:44:26.248 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Servlet_CRUD_Operation]
+21-Sep-2026 10:44:26.328 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Servlet_CRUD_Operation] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Sep-2026 10:44:26.332 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:93)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 10:44:26.333 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [Hibernate Connection Pool Validation Thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 10:44:26.469 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 10:44:27.112 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1396)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:984)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:125)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:92)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+		at java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 10:44:28.564 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.52
+21-Sep-2026 10:44:28.567 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 23 2026 19:29:07 UTC
+21-Sep-2026 10:44:28.567 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.52.0
+21-Sep-2026 10:44:28.567 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Sep-2026 10:44:28.568 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Sep-2026 10:44:28.568 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Sep-2026 10:44:28.568 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\latest\jdk-25
+21-Sep-2026 10:44:28.568 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.2+10-LTS-69
+21-Sep-2026 10:44:28.568 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Sep-2026 10:44:28.568 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 10:44:28.568 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 10:44:28.601 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Sep-2026 10:44:28.601 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Sep-2026 10:44:28.601 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Sep-2026 10:44:28.601 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Sep-2026 10:44:28.601 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Sep-2026 10:44:28.601 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 10:44:28.601 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 10:44:28.601 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\SpringBoot\Servlet_CRUD_Operation\temp
+21-Sep-2026 10:44:28.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\SpringBoot\Servlet_CRUD_Operation\conf\logging.properties
+21-Sep-2026 10:44:28.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Sep-2026 10:44:28.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:E:\IntellijIdea\IntelliJ IDEA 2025.3.2\lib\idea_rt.jar=53298
+21-Sep-2026 10:44:28.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Sep-2026 10:44:28.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+21-Sep-2026 10:44:28.602 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+21-Sep-2026 10:44:28.611 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\latest\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;E:\Nodejs\;E:\Nodejs\node_modules\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\latest\jdk-25\bin;F:\maven\apache-maven-3.9.12\bin;D:\VivoKit\pcsuite\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;D:\;F:\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Deepanshu kaushik\AppData\Local\Microsoft\WindowsApps;;C:\Users\Deepanshu kaushik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Deepanshu kaushik\AppData\Roaming\npm;.]
+21-Sep-2026 10:44:28.753 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 10:44:28.816 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [2,346] ms
+21-Sep-2026 10:44:28.999 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 10:44:29.020 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1084)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:520)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:955)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:709)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:732)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:299)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:472)
+	Caused by: java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:522)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:335)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:297)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:264)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1431)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1444)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:633)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1082)
+		... 11 more
+21-Sep-2026 10:44:29.021 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [949] milliseconds
+21-Sep-2026 10:44:29.089 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Sep-2026 10:44:29.090 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.52]
+21-Sep-2026 10:44:29.101 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 10:44:31.213 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 10:44:31.326 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [2,222] ms
+21-Sep-2026 10:44:31.329 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2308] milliseconds
+21-Sep-2026 10:44:31.337 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:522)
+		at java.base/sun.nio.ch.Net.bind(Net.java:511)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:531)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:848)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:796)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:342)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+21-Sep-2026 10:44:31.338 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 10:44:31.338 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Sep-2026 10:44:31.345 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 10:44:31.347 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 12:22:54.829 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.52
+21-Sep-2026 12:22:54.832 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 23 2026 19:29:07 UTC
+21-Sep-2026 12:22:54.832 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.52.0
+21-Sep-2026 12:22:54.832 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Sep-2026 12:22:54.832 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Sep-2026 12:22:54.832 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Sep-2026 12:22:54.832 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\latest\jdk-25
+21-Sep-2026 12:22:54.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.2+10-LTS-69
+21-Sep-2026 12:22:54.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Sep-2026 12:22:54.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 12:22:54.833 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 12:22:54.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Sep-2026 12:22:54.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Sep-2026 12:22:54.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Sep-2026 12:22:54.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Sep-2026 12:22:54.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Sep-2026 12:22:54.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 12:22:54.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 12:22:54.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\SpringBoot\Servlet_CRUD_Operation\temp
+21-Sep-2026 12:22:54.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\SpringBoot\Servlet_CRUD_Operation\conf\logging.properties
+21-Sep-2026 12:22:54.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Sep-2026 12:22:54.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:E:\IntellijIdea\IntelliJ IDEA 2025.3.2\lib\idea_rt.jar=64486
+21-Sep-2026 12:22:54.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Sep-2026 12:22:54.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+21-Sep-2026 12:22:54.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+21-Sep-2026 12:22:54.851 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\latest\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;E:\Nodejs\;E:\Nodejs\node_modules\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\latest\jdk-25\bin;F:\maven\apache-maven-3.9.12\bin;D:\VivoKit\pcsuite\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;D:\;F:\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Deepanshu kaushik\AppData\Local\Microsoft\WindowsApps;;C:\Users\Deepanshu kaushik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Deepanshu kaushik\AppData\Roaming\npm;.]
+21-Sep-2026 12:22:55.141 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 12:22:55.152 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1084)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:520)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:955)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:709)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:732)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:299)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:472)
+	Caused by: java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:522)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:335)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:297)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:264)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1431)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1444)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:633)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1082)
+		... 11 more
+21-Sep-2026 12:22:55.154 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [511] milliseconds
+21-Sep-2026 12:22:55.196 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Sep-2026 12:22:55.196 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.52]
+21-Sep-2026 12:22:55.208 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 12:22:57.901 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 12:22:58.011 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [2,800] ms
+21-Sep-2026 12:22:58.015 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2859] milliseconds
+21-Sep-2026 12:22:58.022 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:522)
+		at java.base/sun.nio.ch.Net.bind(Net.java:511)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:641)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:326)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:531)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:848)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:796)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:342)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+21-Sep-2026 12:22:58.022 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 12:22:58.022 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Sep-2026 12:22:58.031 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 12:22:58.031 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 12:22:59.798 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Servlet_CRUD_Operation]
+21-Sep-2026 12:22:59.838 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 12:23:01.326 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 12:23:01.361 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [1,523] ms
+21-Sep-2026 12:31:41.976 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.52
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 23 2026 19:29:07 UTC
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.52.0
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\latest\jdk-25
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.2+10-LTS-69
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 12:31:41.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 12:31:41.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Sep-2026 12:31:41.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Sep-2026 12:31:41.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Sep-2026 12:31:41.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Sep-2026 12:31:41.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Sep-2026 12:31:41.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 12:31:41.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 12:31:41.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\SpringBoot\Servlet_CRUD_Operation\temp
+21-Sep-2026 12:31:41.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\SpringBoot\Servlet_CRUD_Operation\conf\logging.properties
+21-Sep-2026 12:31:41.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Sep-2026 12:31:41.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:E:\IntellijIdea\IntelliJ IDEA 2025.3.2\lib\idea_rt.jar=59675
+21-Sep-2026 12:31:41.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Sep-2026 12:31:41.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+21-Sep-2026 12:31:41.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+21-Sep-2026 12:31:42.003 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\latest\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;E:\Nodejs\;E:\Nodejs\node_modules\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\latest\jdk-25\bin;F:\maven\apache-maven-3.9.12\bin;D:\VivoKit\pcsuite\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;D:\;F:\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Deepanshu kaushik\AppData\Local\Microsoft\WindowsApps;;C:\Users\Deepanshu kaushik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Deepanshu kaushik\AppData\Roaming\npm;.]
+21-Sep-2026 12:31:42.318 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 12:31:42.430 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [640] milliseconds
+21-Sep-2026 12:31:42.467 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Sep-2026 12:31:42.467 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.52]
+21-Sep-2026 12:31:42.477 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 12:31:44.266 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 12:31:44.358 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [1,879] ms
+21-Sep-2026 12:31:44.361 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 12:31:44.386 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1954] milliseconds
+21-Sep-2026 12:33:50.144 INFO [http-nio-8080-exec-4] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [name: UserPU]
+21-Sep-2026 12:33:50.411 INFO [http-nio-8080-exec-4] org.hibernate.Version.logVersion HHH000412: Hibernate ORM core version 6.4.4.Final
+21-Sep-2026 12:33:50.521 INFO [http-nio-8080-exec-4] org.hibernate.cache.internal.RegionFactoryInitiator.initiateService HHH000026: Second-level cache disabled
+21-Sep-2026 12:33:51.220 WARN [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH10001002: Using built-in connection pool (not intended for production use)
+21-Sep-2026 12:33:51.228 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+21-Sep-2026 12:33:51.229 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/ServletCrudOP]
+21-Sep-2026 12:33:51.229 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001001: Connection properties: {user=root, password=****}
+21-Sep-2026 12:33:51.229 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001003: Autocommit mode: false
+21-Sep-2026 12:33:51.240 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init> HHH10001115: Connection pool size: 20 (min=1)
+21-Sep-2026 12:33:52.286 WARN [http-nio-8080-exec-4] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+21-Sep-2026 12:33:55.195 INFO [http-nio-8080-exec-4] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21-Sep-2026 12:33:55.267 INFO [http-nio-8080-exec-4] org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1a1eecd7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21-Sep-2026 12:34:17.615 INFO [http-nio-8080-exec-10] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in the request target [/Servlet_CRUD_Operation/users/$%7BpageContext.request.contextPath%7D/users/edit?id=${user.id} ]. The valid characters are defined in RFC 7230 and RFC 3986
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:477)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 13:02:52.259 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:02:52.271 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Sep-2026 13:02:52.274 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Servlet_CRUD_Operation] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Sep-2026 13:02:52.275 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:93)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 13:02:52.275 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [Hibernate Connection Pool Validation Thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 13:02:52.278 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:02:52.283 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:02:58.549 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.52
+21-Sep-2026 13:02:58.554 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 23 2026 19:29:07 UTC
+21-Sep-2026 13:02:58.554 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.52.0
+21-Sep-2026 13:02:58.554 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Sep-2026 13:02:58.554 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Sep-2026 13:02:58.555 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Sep-2026 13:02:58.555 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\latest\jdk-25
+21-Sep-2026 13:02:58.555 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.2+10-LTS-69
+21-Sep-2026 13:02:58.555 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Sep-2026 13:02:58.555 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 13:02:58.555 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 13:02:58.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\SpringBoot\Servlet_CRUD_Operation\temp
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\SpringBoot\Servlet_CRUD_Operation\conf\logging.properties
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:E:\IntellijIdea\IntelliJ IDEA 2025.3.2\lib\idea_rt.jar=60810
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+21-Sep-2026 13:02:58.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+21-Sep-2026 13:02:58.591 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\latest\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;E:\Nodejs\;E:\Nodejs\node_modules\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\latest\jdk-25\bin;F:\maven\apache-maven-3.9.12\bin;D:\VivoKit\pcsuite\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;D:\;F:\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Deepanshu kaushik\AppData\Local\Microsoft\WindowsApps;;C:\Users\Deepanshu kaushik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Deepanshu kaushik\AppData\Roaming\npm;.]
+21-Sep-2026 13:02:58.946 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:02:58.961 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [616] milliseconds
+21-Sep-2026 13:02:59.005 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Sep-2026 13:02:59.005 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.52]
+21-Sep-2026 13:02:59.016 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 13:03:00.902 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 13:03:01.002 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [1,984] ms
+21-Sep-2026 13:03:01.007 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:03:01.038 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2074] milliseconds
+21-Sep-2026 13:04:08.415 INFO [http-nio-8080-exec-9] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in the request target [/Servlet_CRUD_Operation/users/$%7BpageContext.request.contextPath%7D/users/$%7Buser%20!=%20null%20?%20%27update%27%20:%20%27insert%27} ]. The valid characters are defined in RFC 7230 and RFC 3986
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:477)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 13:21:28.392 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:21:28.407 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Sep-2026 13:21:28.415 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:21:28.418 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:21:36.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.52
+21-Sep-2026 13:21:36.131 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 23 2026 19:29:07 UTC
+21-Sep-2026 13:21:36.131 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.52.0
+21-Sep-2026 13:21:36.131 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Sep-2026 13:21:36.131 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Sep-2026 13:21:36.131 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Sep-2026 13:21:36.131 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\latest\jdk-25
+21-Sep-2026 13:21:36.131 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.2+10-LTS-69
+21-Sep-2026 13:21:36.131 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Sep-2026 13:21:36.131 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 13:21:36.132 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 13:21:36.141 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Sep-2026 13:21:36.141 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Sep-2026 13:21:36.141 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Sep-2026 13:21:36.141 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Sep-2026 13:21:36.141 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Sep-2026 13:21:36.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 13:21:36.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 13:21:36.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\SpringBoot\Servlet_CRUD_Operation\temp
+21-Sep-2026 13:21:36.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\SpringBoot\Servlet_CRUD_Operation\conf\logging.properties
+21-Sep-2026 13:21:36.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Sep-2026 13:21:36.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:E:\IntellijIdea\IntelliJ IDEA 2025.3.2\lib\idea_rt.jar=58527
+21-Sep-2026 13:21:36.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Sep-2026 13:21:36.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+21-Sep-2026 13:21:36.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+21-Sep-2026 13:21:36.151 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\latest\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;E:\Nodejs\;E:\Nodejs\node_modules\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\latest\jdk-25\bin;F:\maven\apache-maven-3.9.12\bin;D:\VivoKit\pcsuite\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;D:\;F:\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Deepanshu kaushik\AppData\Local\Microsoft\WindowsApps;;C:\Users\Deepanshu kaushik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Deepanshu kaushik\AppData\Roaming\npm;.]
+21-Sep-2026 13:21:36.444 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:21:36.454 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [514] milliseconds
+21-Sep-2026 13:21:36.497 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Sep-2026 13:21:36.497 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.52]
+21-Sep-2026 13:21:36.509 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 13:21:39.102 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 13:21:39.200 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [2,688] ms
+21-Sep-2026 13:21:39.203 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 13:21:39.233 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2773] milliseconds
+21-Sep-2026 13:22:24.617 INFO [http-nio-8080-exec-7] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [name: UserPU]
+21-Sep-2026 13:22:24.816 INFO [http-nio-8080-exec-7] org.hibernate.Version.logVersion HHH000412: Hibernate ORM core version 6.4.4.Final
+21-Sep-2026 13:22:24.910 INFO [http-nio-8080-exec-7] org.hibernate.cache.internal.RegionFactoryInitiator.initiateService HHH000026: Second-level cache disabled
+21-Sep-2026 13:22:25.386 WARN [http-nio-8080-exec-7] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH10001002: Using built-in connection pool (not intended for production use)
+21-Sep-2026 13:22:25.393 INFO [http-nio-8080-exec-7] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+21-Sep-2026 13:22:25.393 INFO [http-nio-8080-exec-7] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/ServletCrudOP]
+21-Sep-2026 13:22:25.394 INFO [http-nio-8080-exec-7] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001001: Connection properties: {user=root, password=****}
+21-Sep-2026 13:22:25.394 INFO [http-nio-8080-exec-7] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001003: Autocommit mode: false
+21-Sep-2026 13:22:25.401 INFO [http-nio-8080-exec-7] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init> HHH10001115: Connection pool size: 20 (min=1)
+21-Sep-2026 13:22:26.120 WARN [http-nio-8080-exec-7] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+21-Sep-2026 13:22:28.709 INFO [http-nio-8080-exec-7] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21-Sep-2026 13:22:28.785 INFO [http-nio-8080-exec-7] org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@36a01515] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21-Sep-2026 15:38:41.788 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:38:41.805 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Sep-2026 15:38:41.814 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Servlet_CRUD_Operation] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Sep-2026 15:38:41.816 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:93)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 15:38:41.816 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [Hibernate Connection Pool Validation Thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 15:38:41.831 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:38:41.838 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:38:46.426 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.52
+21-Sep-2026 15:38:46.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 23 2026 19:29:07 UTC
+21-Sep-2026 15:38:46.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.52.0
+21-Sep-2026 15:38:46.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Sep-2026 15:38:46.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Sep-2026 15:38:46.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Sep-2026 15:38:46.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\latest\jdk-25
+21-Sep-2026 15:38:46.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.2+10-LTS-69
+21-Sep-2026 15:38:46.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Sep-2026 15:38:46.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 15:38:46.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 15:38:46.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Sep-2026 15:38:46.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Sep-2026 15:38:46.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Sep-2026 15:38:46.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Sep-2026 15:38:46.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Sep-2026 15:38:46.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 15:38:46.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 15:38:46.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\SpringBoot\Servlet_CRUD_Operation\temp
+21-Sep-2026 15:38:46.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\SpringBoot\Servlet_CRUD_Operation\conf\logging.properties
+21-Sep-2026 15:38:46.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Sep-2026 15:38:46.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:E:\IntellijIdea\IntelliJ IDEA 2025.3.2\lib\idea_rt.jar=50607
+21-Sep-2026 15:38:46.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Sep-2026 15:38:46.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+21-Sep-2026 15:38:46.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+21-Sep-2026 15:38:46.458 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\latest\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;E:\Nodejs\;E:\Nodejs\node_modules\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\latest\jdk-25\bin;F:\maven\apache-maven-3.9.12\bin;D:\VivoKit\pcsuite\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;D:\;F:\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Deepanshu kaushik\AppData\Local\Microsoft\WindowsApps;;C:\Users\Deepanshu kaushik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Deepanshu kaushik\AppData\Roaming\npm;.]
+21-Sep-2026 15:38:46.758 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:38:46.773 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [526] milliseconds
+21-Sep-2026 15:38:46.823 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Sep-2026 15:38:46.823 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.52]
+21-Sep-2026 15:38:46.833 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 15:38:48.709 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 15:38:48.810 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [1,973] ms
+21-Sep-2026 15:38:48.814 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:38:48.842 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2067] milliseconds
+21-Sep-2026 15:39:10.927 INFO [http-nio-8080-exec-4] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [name: UserPU]
+21-Sep-2026 15:39:11.132 INFO [http-nio-8080-exec-4] org.hibernate.Version.logVersion HHH000412: Hibernate ORM core version 6.4.4.Final
+21-Sep-2026 15:39:11.234 INFO [http-nio-8080-exec-4] org.hibernate.cache.internal.RegionFactoryInitiator.initiateService HHH000026: Second-level cache disabled
+21-Sep-2026 15:39:11.741 WARN [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH10001002: Using built-in connection pool (not intended for production use)
+21-Sep-2026 15:39:11.751 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+21-Sep-2026 15:39:11.751 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/ServletCrudOP]
+21-Sep-2026 15:39:11.752 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001001: Connection properties: {user=root, password=****}
+21-Sep-2026 15:39:11.752 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001003: Autocommit mode: false
+21-Sep-2026 15:39:11.760 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init> HHH10001115: Connection pool size: 20 (min=1)
+21-Sep-2026 15:39:12.503 WARN [http-nio-8080-exec-4] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+21-Sep-2026 15:39:15.060 INFO [http-nio-8080-exec-4] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21-Sep-2026 15:39:15.125 INFO [http-nio-8080-exec-4] org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@23467cf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21-Sep-2026 15:55:24.330 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:55:24.341 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Sep-2026 15:55:24.347 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Servlet_CRUD_Operation] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Sep-2026 15:55:24.347 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:93)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 15:55:24.347 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [Hibernate Connection Pool Validation Thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 15:55:24.351 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:55:24.354 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:55:27.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.52
+21-Sep-2026 15:55:27.876 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 23 2026 19:29:07 UTC
+21-Sep-2026 15:55:27.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.52.0
+21-Sep-2026 15:55:27.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Sep-2026 15:55:27.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Sep-2026 15:55:27.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Sep-2026 15:55:27.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\latest\jdk-25
+21-Sep-2026 15:55:27.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.2+10-LTS-69
+21-Sep-2026 15:55:27.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Sep-2026 15:55:27.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 15:55:27.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 15:55:27.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Sep-2026 15:55:27.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Sep-2026 15:55:27.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\SpringBoot\Servlet_CRUD_Operation\temp
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\SpringBoot\Servlet_CRUD_Operation\conf\logging.properties
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:E:\IntellijIdea\IntelliJ IDEA 2025.3.2\lib\idea_rt.jar=50783
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+21-Sep-2026 15:55:27.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+21-Sep-2026 15:55:27.901 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\latest\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;E:\Nodejs\;E:\Nodejs\node_modules\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\latest\jdk-25\bin;F:\maven\apache-maven-3.9.12\bin;D:\VivoKit\pcsuite\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;D:\;F:\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Deepanshu kaushik\AppData\Local\Microsoft\WindowsApps;;C:\Users\Deepanshu kaushik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Deepanshu kaushik\AppData\Roaming\npm;.]
+21-Sep-2026 15:55:28.153 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:55:28.170 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [594] milliseconds
+21-Sep-2026 15:55:28.223 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Sep-2026 15:55:28.223 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.52]
+21-Sep-2026 15:55:28.237 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 15:55:30.047 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 15:55:30.138 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [1,899] ms
+21-Sep-2026 15:55:30.141 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:55:30.170 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1997] milliseconds
+21-Sep-2026 15:58:12.365 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:58:12.381 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Sep-2026 15:58:12.387 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:58:12.389 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:58:14.290 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.52
+21-Sep-2026 15:58:14.293 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 23 2026 19:29:07 UTC
+21-Sep-2026 15:58:14.293 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.52.0
+21-Sep-2026 15:58:14.294 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Sep-2026 15:58:14.294 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Sep-2026 15:58:14.294 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Sep-2026 15:58:14.294 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\latest\jdk-25
+21-Sep-2026 15:58:14.294 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.2+10-LTS-69
+21-Sep-2026 15:58:14.294 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Sep-2026 15:58:14.294 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 15:58:14.294 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\SpringBoot\Servlet_CRUD_Operation\temp
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\SpringBoot\Servlet_CRUD_Operation\conf\logging.properties
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:E:\IntellijIdea\IntelliJ IDEA 2025.3.2\lib\idea_rt.jar=53974
+21-Sep-2026 15:58:14.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Sep-2026 15:58:14.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+21-Sep-2026 15:58:14.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+21-Sep-2026 15:58:14.318 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\latest\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;E:\Nodejs\;E:\Nodejs\node_modules\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\latest\jdk-25\bin;F:\maven\apache-maven-3.9.12\bin;D:\VivoKit\pcsuite\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;D:\;F:\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Deepanshu kaushik\AppData\Local\Microsoft\WindowsApps;;C:\Users\Deepanshu kaushik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Deepanshu kaushik\AppData\Roaming\npm;.]
+21-Sep-2026 15:58:14.603 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:58:14.618 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [514] milliseconds
+21-Sep-2026 15:58:14.662 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Sep-2026 15:58:14.662 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.52]
+21-Sep-2026 15:58:14.675 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 15:58:16.625 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 15:58:16.740 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [2,062] ms
+21-Sep-2026 15:58:16.744 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 15:58:16.776 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2155] milliseconds
+21-Sep-2026 15:58:33.947 INFO [http-nio-8080-exec-4] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [name: UserPU]
+21-Sep-2026 15:58:34.157 INFO [http-nio-8080-exec-4] org.hibernate.Version.logVersion HHH000412: Hibernate ORM core version 6.4.4.Final
+21-Sep-2026 15:58:34.248 INFO [http-nio-8080-exec-4] org.hibernate.cache.internal.RegionFactoryInitiator.initiateService HHH000026: Second-level cache disabled
+21-Sep-2026 15:58:34.741 WARN [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH10001002: Using built-in connection pool (not intended for production use)
+21-Sep-2026 15:58:34.750 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+21-Sep-2026 15:58:34.750 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/ServletCrudOP]
+21-Sep-2026 15:58:34.750 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001001: Connection properties: {user=root, password=****}
+21-Sep-2026 15:58:34.750 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001003: Autocommit mode: false
+21-Sep-2026 15:58:34.763 INFO [http-nio-8080-exec-4] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init> HHH10001115: Connection pool size: 20 (min=1)
+21-Sep-2026 15:58:35.504 WARN [http-nio-8080-exec-4] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+21-Sep-2026 15:58:38.041 INFO [http-nio-8080-exec-4] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21-Sep-2026 15:58:38.114 INFO [http-nio-8080-exec-4] org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a37491c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21-Sep-2026 16:01:35.606 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 16:01:35.619 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Sep-2026 16:01:35.622 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Servlet_CRUD_Operation] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Sep-2026 16:01:35.623 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:93)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 16:01:35.623 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [Hibernate Connection Pool Validation Thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 16:01:35.629 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 16:01:35.642 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 16:01:38.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.52
+21-Sep-2026 16:01:38.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 23 2026 19:29:07 UTC
+21-Sep-2026 16:01:38.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.52.0
+21-Sep-2026 16:01:38.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Sep-2026 16:01:38.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Sep-2026 16:01:38.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Sep-2026 16:01:38.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\latest\jdk-25
+21-Sep-2026 16:01:38.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.2+10-LTS-69
+21-Sep-2026 16:01:38.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Sep-2026 16:01:38.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 16:01:38.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 16:01:38.616 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Sep-2026 16:01:38.616 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Sep-2026 16:01:38.616 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Sep-2026 16:01:38.616 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Sep-2026 16:01:38.616 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Sep-2026 16:01:38.616 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Tomcat\apache-tomcat-10.1.52
+21-Sep-2026 16:01:38.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\SpringBoot\Servlet_CRUD_Operation
+21-Sep-2026 16:01:38.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\SpringBoot\Servlet_CRUD_Operation\temp
+21-Sep-2026 16:01:38.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\SpringBoot\Servlet_CRUD_Operation\conf\logging.properties
+21-Sep-2026 16:01:38.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Sep-2026 16:01:38.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:E:\IntellijIdea\IntelliJ IDEA 2025.3.2\lib\idea_rt.jar=62081
+21-Sep-2026 16:01:38.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Sep-2026 16:01:38.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+21-Sep-2026 16:01:38.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+21-Sep-2026 16:01:38.628 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\latest\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;E:\Nodejs\;E:\Nodejs\node_modules\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\latest\jdk-25\bin;F:\maven\apache-maven-3.9.12\bin;D:\VivoKit\pcsuite\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;D:\;F:\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Deepanshu kaushik\AppData\Local\Microsoft\WindowsApps;;C:\Users\Deepanshu kaushik\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Deepanshu kaushik\AppData\Roaming\npm;.]
+21-Sep-2026 16:01:38.898 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 16:01:38.915 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [486] milliseconds
+21-Sep-2026 16:01:38.961 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Sep-2026 16:01:38.961 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.52]
+21-Sep-2026 16:01:38.972 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml]
+21-Sep-2026 16:01:40.825 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Sep-2026 16:01:40.949 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [F:\SpringBoot\Servlet_CRUD_Operation\conf\Catalina\localhost\Servlet_CRUD_Operation.xml] has finished in [1,973] ms
+21-Sep-2026 16:01:40.954 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 16:01:40.986 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2068] milliseconds
+21-Sep-2026 16:01:52.425 INFO [http-nio-8080-exec-1] org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [name: UserPU]
+21-Sep-2026 16:01:52.622 INFO [http-nio-8080-exec-1] org.hibernate.Version.logVersion HHH000412: Hibernate ORM core version 6.4.4.Final
+21-Sep-2026 16:01:52.719 INFO [http-nio-8080-exec-1] org.hibernate.cache.internal.RegionFactoryInitiator.initiateService HHH000026: Second-level cache disabled
+21-Sep-2026 16:01:53.219 WARN [http-nio-8080-exec-1] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure HHH10001002: Using built-in connection pool (not intended for production use)
+21-Sep-2026 16:01:53.227 INFO [http-nio-8080-exec-1] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+21-Sep-2026 16:01:53.228 INFO [http-nio-8080-exec-1] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/ServletCrudOP]
+21-Sep-2026 16:01:53.228 INFO [http-nio-8080-exec-1] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001001: Connection properties: {user=root, password=****}
+21-Sep-2026 16:01:53.228 INFO [http-nio-8080-exec-1] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator HHH10001003: Autocommit mode: false
+21-Sep-2026 16:01:53.239 INFO [http-nio-8080-exec-1] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init> HHH10001115: Connection pool size: 20 (min=1)
+21-Sep-2026 16:01:53.893 WARN [http-nio-8080-exec-1] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+21-Sep-2026 16:01:56.487 INFO [http-nio-8080-exec-1] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21-Sep-2026 16:01:56.559 INFO [http-nio-8080-exec-1] org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@60c86b65] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21-Sep-2026 16:23:56.564 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 16:23:56.577 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Sep-2026 16:23:56.581 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [Servlet_CRUD_Operation] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Sep-2026 16:23:56.581 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:93)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 16:23:56.582 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Servlet_CRUD_Operation] appears to have started a thread named [Hibernate Connection Pool Validation Thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:271)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1803)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1166)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:883)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1016)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1076)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+21-Sep-2026 16:23:56.586 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Sep-2026 16:23:56.588 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
